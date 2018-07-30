@@ -37,7 +37,9 @@ namespace NSSAG
             do
                 core.Loop();
             while (!(core.IsExit | DxManager.Instance.ProcessInfo() == -1));
+
             core.Dispose();
+            this.Close();
         }
     }
 }
